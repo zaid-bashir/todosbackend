@@ -6,9 +6,9 @@ const todoRoutes = require('./routes/todos');
 const authMiddleware = require('./middleware/auth');
 
 const app = express();
-const PORT = 5000;
+const PORT = 5000 || process.env.PORT;
 
-mongoose.connect('mongodb://localhost:27017/todosbackend',);
+mongoose.connect('mongodb+srv://developerzaidbashir:Zaid123@todoscluster.r4glsup.mongodb.net/?retryWrites=true&w=majority&appName=todoscluster',);
 
 app.use(bodyParser.json());
 
